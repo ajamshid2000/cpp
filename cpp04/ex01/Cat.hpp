@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ajamshid <ajamshid@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/05 18:15:09 by ajamshid          #+#    #+#             */
+/*   Updated: 2025/01/09 15:11:40 by ajamshid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <string>
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+#ifndef CAT_HPP
+#define CAT_HPP
+
+class Cat : public Animal
+{
+private:
+    Brain *brain;
+public:
+    Cat();
+    ~Cat();
+    Cat &operator=(const Cat &cat);
+    Cat(const Cat &cat);
+
+    void makeSound() const;
+};
+
+#endif
